@@ -1,12 +1,14 @@
-@import '_variable';
 @import '_mixins';
 
-a {
-  margin-bottom: 10px;
-  &:nth-child(odd) {
-    @include link('odd');
+h1 {
+  color: red;
+  @include responsive('iphone') {
+    color: yellow;
   }
-  &:nth-child(even) {
-    @include link('even');
+  @include responsive('inphone-l') {
+    font-size: 60px;
+  }
+  @include responsive('tablet') {
+    color: green;
   }
 }
